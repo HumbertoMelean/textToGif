@@ -1,4 +1,4 @@
-**README created by chatGPT**
+**README created with chatGPT**
 
 # Speed Reader GIF Generator
 
