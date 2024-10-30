@@ -1,0 +1,26 @@
+/* Theme variables only */
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --control-bg: #f0f0f0;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --button-hover: #0056b3;
+  --record-bg: #ff0000;
+  --record-hover: #cc0000;
+  --input-bg: #ffffff;
+  --slider-bg: #007bff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --control-bg: #333333;
+  --button-bg: #0056b3;
+  --button-text: #ffffff;
+  --button-hover: #003d80;
+  --record-bg: #ff0000;
+  --record-hover: #cc0000;
+  --input-bg: #4d4d4d;
+  --slider-bg: #0056b3;
+}

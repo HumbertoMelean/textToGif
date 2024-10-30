@@ -1,0 +1,185 @@
+/* Control Groups */
+.control-group {
+  background: var(--control-bg);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.settings-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.settings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Section Headings */
+.section-heading {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Setting Items */
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Inputs */
+.setting-item input[type="range"] {
+  width: 100%;
+}
+
+.setting-item input[type="color"] {
+  width: 50px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.setting-item input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid var(--control-bg);
+  border-radius: 4px;
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+/* Value Display */
+.value-display {
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+/* Buttons */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+#startRecording {
+  background-color: var(--record-bg);
+}
+
+#startRecording:hover {
+  background-color: var(--record-hover);
+}
+
+#startRecording.recording {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .settings-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .settings-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add new button styles */
+.button-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+}
+
+.control-button {
+  flex: 1;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#startReading {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+#startReading:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+#startRecording {
+  background-color: var(--record-bg);
+  color: var(--button-text);
+}
+
+#startRecording:hover {
+  background-color: var(--record-hover);
+  transform: translateY(-2px);
+}
+
+#startRecording.recording {
+  animation: pulse 1.5s infinite;
+}
+
+/* Remove the old button group since we moved the buttons */
+.button-group {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .control-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    min-height: 45px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button-container {
+    flex-direction: column;
+  }
+
+  .control-button {
+    width: 100%;
+  }
+}
